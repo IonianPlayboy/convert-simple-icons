@@ -1,0 +1,9 @@
+{
+	"events": {
+		"restart": "node -e console.clear() && rimraf ./result",
+		"start": "node -e console.clear() && rimraf ./result"
+	},
+	"ignore": [".git", "./result"],
+	"watch": ["./dist"],
+	"ext": "js"
+}

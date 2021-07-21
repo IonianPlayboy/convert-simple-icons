@@ -1,0 +1,44 @@
+{
+	"name": "convert-simple-icons",
+	"version": "0.0.1",
+	"description": "Convert icons from SimpleIcons.org into other image format with the brand color added",
+	"main": "dist/index.js",
+	"author": "Nate",
+	"license": "MIT",
+	"keywords": [
+		"cli"
+	],
+	"files": [
+		"bin/",
+		"dist/"
+	],
+	"bin": {
+		"convert-icons": "bin/script.js"
+	},
+	"scripts": {
+		"lint": "eslint --ext .ts --ignore-path .gitignore .",
+		"prebuild": "rimraf ./dist",
+		"build": " tsc",
+		"dev:build": "yarn build --watch",
+		"dev": "nodemon bin/script.js",
+		"prestart": "rimraf ./bin/result",
+		"start": "node bin/script.js"
+	},
+	"devDependencies": {
+		"@types/sharp": "^0.28.4",
+		"@types/simple-icons": "^5.0.1",
+		"@typescript-eslint/eslint-plugin": "^4.28.4",
+		"@typescript-eslint/parser": "^4.28.4",
+		"eslint": "^7.31.0",
+		"eslint-config-prettier": "^8.3.0",
+		"eslint-plugin-prettier": "^3.4.0",
+		"nodemon": "^2.0.12",
+		"prettier": "^2.3.2",
+		"rimraf": "^3.0.2",
+		"typescript": "^4.3.5"
+	},
+	"dependencies": {
+		"sharp": "^0.28.3",
+		"simple-icons": "^5.7.0"
+	}
+}
